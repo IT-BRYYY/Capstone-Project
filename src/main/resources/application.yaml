@@ -1,3 +1,12 @@
 spring:
-  application:
-    name: CapstoneProject
+  datasource:
+    url: jdbc:postgresql://localhost:5432/capstone
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
