@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Portal — Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- adjust these paths / use url_for() if your framework serves static files differently -->
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/landing.css">
+</head>
+<body>
+
+<div class="rig">
+    <div class="card view">
+
+        <div class="logo-circle"><span>Logo</span></div>
+
+        <div class="heading">
+            <div class="eyebrow">Barangay Portal</div>
+            <h1>Welcome</h1>
+            <div class="sub">Sign in to access barangay services</div>
+        </div>
+
+        <div class="role-list">
+            <a class="role-btn" href="/login/resident">
+        <span class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </span>
+                <span class="role-text">
+          <span class="label">Resident</span>
+          <span class="desc">Requests, announcements, documents</span>
+        </span>
+                <span class="role-chevron">›</span>
+            </a>
+
+            <a class="role-btn admin" href="/login/admin">
+        <span class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/><path d="M19 8l1.5 1.5L23 7"/></svg>
+        </span>
+                <span class="role-text">
+          <span class="label">Admin / Staff</span>
+          <span class="desc">Barangay office management</span>
+        </span>
+                <span class="role-chevron">›</span>
+            </a>
+        </div>
+
+        <div class="divider-row"><span class="line"></span><span>or</span><span class="line"></span></div>
+
+        <div class="signup-row">
+            Don't have an account? <a href="/register">Sign up</a>
+        </div>
+
+        <div class="foot-note">Official Barangay Portal</div>
+    </div>
+</div>
+
+</body>
+</html>

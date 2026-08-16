@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign In — Barangay Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+
+<div class="rig">
+    <div class="card view">
+
+        <div class="logo-circle"><span>Logo</span></div>
+
+        <div class="form-header">
+            <a class="back-btn" href="/" aria-label="Back">←</a>
+            <div class="form-title admin"><span>Admin</span>Staff sign in</div>
+        </div>
+
+        <form method="POST" action="/login/admin">
+            <div class="field">
+                <label for="adm-email">Staff email</label>
+                <input id="adm-email" name="email" type="email" placeholder="staff@barangay.gov.ph" required>
+            </div>
+            <div class="field">
+                <label for="adm-pass">Password</label>
+                <div class="password-field">
+                    <input id="adm-pass" name="password" type="password" placeholder="••••••••" required>
+                    <button type="button" class="toggle-pass" aria-label="Show password">
+                        <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a19.7 19.7 0 0 1 4.22-5.44M9.9 4.24A10.4 10.4 0 0 1 12 4c7 0 11 8 11 8a19.6 19.6 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                    </button>
+                </div>
+            </div>
+            <button class="submit-btn admin" type="submit">Sign in</button>
+            <div class="status-note"></div>
+        </form>
+
+        <div class="foot-note">Official Barangay Portal</div>
+    </div>
+</div>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>
