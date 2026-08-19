@@ -13,16 +13,16 @@ public class PageController {
 
     @GetMapping("/login/resident")
     public String residentLogin() {
-        return "resident-login";
+        return "auth/resident-login";
     }
 
     @GetMapping("/login/admin")
     public String adminLogin() {
-        return "admin-login";
+        return "auth/admin-login";
     }
 
     @GetMapping("/register")
     public String register() {
-        return "register";
+        return "auth/register";
     }
 }
