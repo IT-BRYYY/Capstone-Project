@@ -3,56 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Create Account — Barangay Portal</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
     <link rel="stylesheet" href="/css/auth.css">
 </head>
+
 <body>
 
 <div class="rig">
+
     <div class="card view">
 
-        <div class="logo-circle"><span>Logo</span></div>
-
-        <div class="form-header">
-            <a class="back-btn" href="/" aria-label="Back">←</a>
-            <div class="form-title"><span>New Resident</span>Create an account</div>
+        <div class="logo-circle">
+            <span>Logo</span>
         </div>
 
+        <div class="form-header">
+
+            <a class="back-btn" href="/" aria-label="Back">←</a>
+
+            <div class="form-title">
+                <span>New Resident</span>
+                Create an account
+            </div>
+
+        </div>
+
+
+        <!-- Registration Form -->
         <form method="POST" action="/register">
+
+            <!-- Full Name -->
             <div class="field">
                 <label for="su-name">Full name</label>
-                <input id="su-name" name="full_name" type="text" placeholder="Juan Dela Cruz" required>
+
+                <input
+                        id="su-name"
+                        name="full_name"
+                        type="text"
+                        placeholder="Juan Dela Cruz"
+                        autocomplete="name"
+                        required>
             </div>
+
+
+            <!-- Birthdate -->
+            <div class="field">
+                <label for="su-birthdate">Birthdate</label>
+
+                <input
+                        id="su-birthdate"
+                        name="birthdate"
+                        type="date"
+                        required>
+            </div>
+
+
+            <!-- Address -->
             <div class="field">
                 <label for="su-address">House address / Purok</label>
-                <input id="su-address" name="address" type="text" placeholder="e.g. Purok 3" required>
+
+                <input
+                        id="su-address"
+                        name="address"
+                        type="text"
+                        placeholder="e.g. Purok 3"
+                        required>
             </div>
+
+
+            <!-- Username -->
             <div class="field">
-                <label for="su-email">Email or mobile number</label>
-                <input id="su-email" name="email" type="text" placeholder="you@email.com" required>
+                <label for="su-username">Username</label>
+
+                <input
+                        id="su-username"
+                        name="username"
+                        type="text"
+                        placeholder="Create a username"
+                        autocomplete="username"
+                        required>
             </div>
+
+
+            <!-- Password -->
             <div class="field">
                 <label for="su-pass">Create password</label>
+
                 <div class="password-field">
-                    <input id="su-pass" name="password" type="password" placeholder="••••••••" required>
-                    <button type="button" class="toggle-pass" aria-label="Show password">
-                        <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                        <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a19.7 19.7 0 0 1 4.22-5.44M9.9 4.24A10.4 10.4 0 0 1 12 4c7 0 11 8 11 8a19.6 19.6 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+
+                    <input
+                            id="su-pass"
+                            name="password"
+                            type="password"
+                            placeholder="••••••••"
+                            autocomplete="new-password"
+                            required>
+
+                    <button
+                            type="button"
+                            class="toggle-pass"
+                            aria-label="Show password">
+
+                        <svg class="icon-eye"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+
+                        </svg>
+
+                        <svg class="icon-eye-off"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a19.7 19.7 0 0 1 4.22-5.44"/>
+                            <path d="M9.9 4.24A10.4 10.4 0 0 1 12 4c7 0 11 8 11 8a19.6 19.6 0 0 1-2.16 3.19"/>
+                            <path d="m14.12 14.12-4.24-4.24"/>
+                            <path d="M1 1l22 22"/>
+
+                        </svg>
+
                     </button>
+
                 </div>
             </div>
-            <button class="submit-btn" type="submit">Create account</button>
+
+
+            <!-- Submit -->
+            <button class="submit-btn" type="submit">
+                Create account
+            </button>
+
             <div class="status-note"></div>
+
         </form>
 
-        <div class="switch-note">Already have an account? <a href="/resident-login">Sign in</a></div>
 
-        <div class="foot-note">Official Barangay Portal</div>
+        <!-- Login -->
+        <div class="switch-note">
+            Already have an account?
+            <a href="/resident-login">Sign in</a>
+        </div>
+
+
+        <div class="foot-note">
+            Official Barangay Portal
+        </div>
+
     </div>
+
 </div>
 
+
 <script src="/js/auth.js"></script>
+
 </body>
 </html>
