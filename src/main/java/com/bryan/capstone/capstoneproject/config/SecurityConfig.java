@@ -7,8 +7,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-
-
 @Configuration
 public class SecurityConfig {
 
@@ -28,6 +26,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
+                        .loginPage("/")
                         .loginProcessingUrl("/login")
                         .successHandler((request, response, authentication) -> {
                             boolean isAdmin = authentication.getAuthorities().stream()
@@ -40,6 +39,5 @@ public class SecurityConfig {
                         .logoutSuccessUrl("/")
                 );
         return http.build();
-
     }
 }
