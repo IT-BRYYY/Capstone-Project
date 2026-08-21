@@ -1,4 +1,4 @@
-// auth.js — show/hide password toggle
+// auth.js — show/hide password toggle + smooth page transitions
 // Wrap a password input like this and it just works:
 //
 // <div class="password-field">
@@ -22,3 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Smooth page-to-page navigation using the View Transitions API
+// (supported in Chrome/Edge; gracefully falls back to normal navigation elsewhere)
+if (document.startViewTransition) {
+    document.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href]');
+        if (!link) return;
+        if (link.target === '_blank' || link.href.startsWith('#')) return;
+        if (link.href.startsWith('mailto:') || link.href.startsWith('tel:')) return;
+
+        e.preventDefault();
+        document.startViewTransition(function () {
+            window.location.href = link.href;
+        });
+    });
+}
