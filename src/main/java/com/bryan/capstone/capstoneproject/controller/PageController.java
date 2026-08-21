@@ -1,4 +1,4 @@
-package controller;
+package com.bryan.capstone.capstoneproject.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
