@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head :: head(title='Admin Sign In — Barangay Portal')}"></head>
+<head th:replace="~{fragments/head :: head(title='Admin Sign In', extraStylesheet=null)}"></head>
 <body>
 
 <div class="rig">
@@ -12,7 +12,7 @@
             <div class="form-title admin"><span>Admin</span>Staff sign in</div>
         </div>
 
-        <form method="POST" action="/login/admin">
+        <form method="POST" action="/login">
             <div class="field">
                 <label for="adm-email">Staff email</label>
                 <input id="adm-email" name="email" type="email" placeholder="staff@barangay.gov.ph" required>

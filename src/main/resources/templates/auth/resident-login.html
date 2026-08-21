@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head :: head(title='Resident Sign In — Barangay Portal')}"></head>
+<head th:replace="~{fragments/head :: head(title='Resident Sign In', extraStylesheet=null)}"></head>
 
 <body>
 
@@ -24,7 +24,7 @@
         </div>
 
 
-        <form method="POST" action="/login/resident">
+        <form method="POST" action="/login">
 
             <!-- Username -->
             <div class="field">
