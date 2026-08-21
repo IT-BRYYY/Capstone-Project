@@ -1,15 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barangay Portal — Sign In</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- adjust these paths / use url_for() if your framework serves static files differently -->
-    <link rel="stylesheet" href="/css/auth.css">
-    <link rel="stylesheet" href="/css/landing.css">
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head(title='Barangay Portal — Sign In', extraStylesheet='landing.css')}"></head>
 <body>
 
 <div class="rig">
